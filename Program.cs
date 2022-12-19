@@ -14,6 +14,35 @@
 // A (7,-5, 0); B (1,-1,9) -> 11.53
 
 
+double distance (double x1, double y1, double z1, double x2, double y2, double z2)
+{
+    double dy = y1 - y2;
+    double dx = x1 - x2;
+    double dz = z1 - z2;
+    double d = Math.Round(Math.Sqrt(dx*dx + dy*dy + dz*dz),2);
+    return d;
+}
+
+Console.WriteLine("Введите X1:");
+double x1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите Y1:");
+double y1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите Z1:");
+double z1 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите X2:");
+double x2 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите Y2:");
+double y2 = Convert.ToDouble(Console.ReadLine());
+Console.WriteLine("Введите Z2:");
+double z2 = Convert.ToDouble(Console.ReadLine());
+
+double result = distance (x1,y1,z1,x2,y2,z2);
+
+if (result == 0)
+Console.WriteLine("Точки точки в одинаковых координатах");
+else
+Console.WriteLine($"Расстояние между точками {result}");
+
 
 
 // Задача 23
@@ -22,14 +51,14 @@
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-void cubeNumber (int N)
-{
-    for (int i = 1; i <= N; i++)
-    {
-        Console.Write(Math.Pow(i,3)+" ");
-    }
-}
+// void cubeNumber (int N)
+// {
+//     for (int i = 1; i <= N; i++)
+//     {
+//         Console.Write(Math.Pow(i,3)+" ");
+//     }
+// }
 
-Console.WriteLine("Введите число:");
-int N = Convert.ToInt32(Console.ReadLine());
-cubeNumber(N);
+// Console.WriteLine("Введите число:");
+// int N = Convert.ToInt32(Console.ReadLine());
+// cubeNumber(N);
